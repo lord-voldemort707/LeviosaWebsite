@@ -1,6 +1,6 @@
 import DS from 'ember-data';
-
+import ENV from 'leviosa-website/config/environment'
 export default DS.JSONAPIAdapter.extend({
-  host: 'http://localhost:3000',
+  host: ENV.apiHost,
   namespace: 'v1'
 });

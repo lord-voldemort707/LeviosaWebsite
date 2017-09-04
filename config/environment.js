@@ -24,6 +24,7 @@ module.exports = function(environment) {
     }
   };
 
+  ENV.apiHost = "http://localhost:3000";
   if (environment === 'development') {
     // ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;
@@ -44,7 +45,7 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-
+    ENV.apiHost = "http://api.prospects-tracker.com";
   }
 
   return ENV;
