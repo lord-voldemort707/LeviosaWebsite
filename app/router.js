@@ -7,7 +7,9 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.route('teams', function() {});
+  this.route('teams', function() {
+    this.route('show', {path: '/:code'});
+  });
 });
 
 export default Router;

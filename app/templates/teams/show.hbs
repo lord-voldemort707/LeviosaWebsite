@@ -1,0 +1,40 @@
+<div class="page-header">
+  <h1 id="tables">{{model.name}} prospects</h1>
+</div>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Player</th>
+      <th>Position</th>
+      <th>Season</th>
+      <th>Team</th>
+      <th>League</th>
+      <th>GP</th>
+      <th>Goals</th>
+      <th>Assists</th>
+      <th>Points</th>
+      <th>PIM</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    {{#each model.players as | player |}}
+      <tr>
+        <td>{{player.name}}</td>
+        <td>{{player.position}}</td>
+        {{#each player.player-seasons as | season |}}
+          <td>{{season.season}}</td>
+          <td>{{season.team}}</td>
+          <td>{{season.league}}</td>
+          <td>{{season.games_played}}</td>
+          <td>{{season.goals}}</td>
+          <td>{{season.assists}}</td>
+          <td>{{season.points}}</td>
+          <td>{{season.pim}}</td>
+        {{/each}}
+      </tr>
+    {{/each}}
+  </tbody>
+</table>
+
+{{outlet}}

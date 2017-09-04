@@ -1,4 +1,4 @@
-<h1>Tracking prospects from the follwing teams</h1>
+<h1>Tracking prospects from the following teams</h1>
 <table class="table table-striped">
   <thead>
     <tr>
@@ -9,7 +9,7 @@
   <tbody>
     {{#each model as |team|}}
       <tr>
-        <td>{{team.name}} ({{team.code}})</td>
+        <td>{{#link-to "teams.show" team.code}}{{team.name}} ({{team.code}}){{/link-to}}</td>
         <td>{{team.playerCount}}</td>
       </tr>
     {{/each}}
